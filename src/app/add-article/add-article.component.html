@@ -1,0 +1,37 @@
+<app-menu></app-menu>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <form class="form-horizontal span6" [formGroup]="addForm">
+        <fieldset>
+          <legend>Article</legend>
+
+          <div class="form-group">
+            <label class="control-label">Title &nbsp;</label>
+              <input type="text" formControlName="title" class="form-control">
+          </div>
+          <br>
+          <div class="form-group">
+            <label class="control-label">Content &nbsp;</label>
+              <input type="text" formControlName="content" class="form-control">
+          </div>
+          
+          <!--<p class="card-text mb-auto"> creationDate  </p>-->
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary" (click)=addArticle() routerLink="/home">Submit</button>
+            <button type="button" class="btn">Cancel</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>

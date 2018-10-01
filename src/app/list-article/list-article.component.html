@@ -1,0 +1,42 @@
+<app-menu></app-menu>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+
+
+<div class="container">
+
+
+
+  <div class="card-deck mb-3 text-center">
+
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">{{article.title}}</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">{{article.content}} </h1>
+        <form [formGroup]="addForm">
+          <input type="text" formControlName="content" placeholder="Ajout comment">
+          <button type="button" (click)="addCommentbtn()" class="btn btn-outline- btn-sm">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+          </button>
+        </form>
+        <h1 class="card-title pricing-card-title">{{article.comment}} </h1>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<ul>
+  <li *ngFor="let com of article.comments"> {{com.content}}</li>
+</ul>
